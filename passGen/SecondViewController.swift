@@ -1,10 +1,3 @@
-//
-//  SecondViewController.swift
-//  passGen
-//
-//  Created by Olzhas Zhakan on 07.08.2023.
-//
-
 import Foundation
 import UIKit
 

@@ -1,10 +1,3 @@
-//
-//  ViewModel.swift
-//  passGen
-//
-//  Created by Olzhas Zhakan on 08.08.2023.
-//
-
 import Foundation
 
 class PassManager {
