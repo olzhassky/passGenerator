@@ -88,6 +88,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "Login: \(isVisible ? account.login: "*****") Password: \(isVisible ? account.password : "*****")"
         return cell
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            passManager.accounts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
